@@ -1,5 +1,14 @@
-**Algorithms and Data structures** (WIP)
+**Algorithms and Data structures** 
+=======
+--------
+
 
 Algorithms:
+--
 
-- Sorting : (insertion sort, merge sort)	
+- Sorting : 
+	*	Insertion Sort
+	*	Merge Sort
+
+
+(WIP)
