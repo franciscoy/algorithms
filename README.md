@@ -2,4 +2,4 @@
 
 Algorithms:
 
-- Sorting : (insertion sort)	
+- Sorting : (insertion sort, merge sort)	

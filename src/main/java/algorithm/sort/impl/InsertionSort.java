@@ -1,8 +1,7 @@
-package algorithm.sort;
+package algorithm.sort.impl;
 
 import algorithm.AbstractAlgorithm;
-
-import java.util.Arrays;
+import algorithm.sort.SortingAlgorithm;
 
 /**
  * Created by Francisco Yllera.

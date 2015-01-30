@@ -1,5 +1,7 @@
 package algorithm.sort;
 
+import algorithm.sort.impl.InsertionSort;
+
 /**
  * Created by Francisco Yllera.
  */
