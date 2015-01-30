@@ -16,6 +16,20 @@ Is a simple sorting algorithm that builds the final sorted array (or list) one i
 | Space total |    О(n)    |
 | Aux | О(1)  |
  
+ ----
+ Selection Sort
+ ------
+ 
+ The algorithm divides the input list into two parts: the sublist of items already sorted, which is built up from left to right at the front (left) of the list, and the sublist of items remaining to be sorted that occupy the rest of the list.
+ 
+ |Complexity|            |
+|----------|:-------------:|
+| Avg. Time |  О(n2)  |
+| Space total |    О(n)    |
+| Aux | О(1)  |
+ 
+ 
+ 
  -------
  Merge Sort
 ---------------------
