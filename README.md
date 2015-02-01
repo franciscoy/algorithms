@@ -10,6 +10,7 @@ Algorithms:
 	*	Insertion Sort
 	*	Merge Sort
 	*	Selection Sort
+	*	Bubble Sort
 
 
 (WIP)

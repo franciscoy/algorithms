@@ -9,6 +9,7 @@ Insertion Sort
 
 Is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
 
+For smaller arrays its the preferred algorithm.
 
 |Complexity|            |
 |----------|:-------------:|
@@ -21,6 +22,23 @@ Is a simple sorting algorithm that builds the final sorted array (or list) one i
 ---------------------
  
  The algorithm divides the input list into two parts: the sublist of items already sorted, which is built up from left to right at the front (left) of the list, and the sublist of items remaining to be sorted that occupy the rest of the list.
+ 
+ Selection Sort swaps at most n times but needs to scan every element to know how is the lower, since it cant get  helped by the ordernes of an array Insertion Sort is faster.
+ 
+|Complexity		|            |
+|----------		|:-------------:|
+| Avg. Time 	|  О(n2)  |
+| Space total 	|    О(n)    |
+| Aux | О(1)  	|
+ 
+ 
+ -------
+  Bubble Sort
+---------------------
+ 
+ Is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. 
+ 
+ Bubble Sort swap n * n(n -1), therefore Selection sort is faster.
  
 |Complexity		|            |
 |----------		|:-------------:|
