@@ -11,6 +11,7 @@ Algorithms:
 	*	Merge Sort
 	*	Selection Sort
 	*	Bubble Sort
+	* 	Shell Sort
 
 
 (WIP)

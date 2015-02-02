@@ -8,12 +8,6 @@ import static algorithm.utils.ArrayPrintUtils.printArr;
  * Created by Francisco Yllera.
  */
 public class ShellSort extends AbstractSortingAlgorithm implements SortingAlgorithm {
-    public static void main(String[] args) {
-        ShellSort ss = new ShellSort();
-        int[] input = {2,1,5,4,3,7,6,9,8};
-
-        printArr(ss.sort(input));
-    }
 
     @Override
     public int[] sort(int[] inputArray) {
@@ -30,5 +24,4 @@ public class ShellSort extends AbstractSortingAlgorithm implements SortingAlgori
         }
         return inputArray;
     }
-
 }
