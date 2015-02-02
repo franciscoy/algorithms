@@ -7,31 +7,31 @@ import static algorithm.utils.ArrayPrintUtils.printArr;
 /**
  * Created by Francisco Yllera.
  */
-public class ShellSort implements SortingAlgorithm {
+public class ShellSort extends AbstractSortingAlgorithm implements SortingAlgorithm {
     public static void main(String[] args) {
         ShellSort ss = new ShellSort();
-        int[] input = {2,1,5,4,3};
+        int[] input = {2,1,5,4,3,7,6,9,8};
 
         printArr(ss.sort(input));
     }
 
     @Override
     public int[] sort(int[] inputArray) {
-//        int gap = inputArray.length / 2;
-//        {
-//            for( int gap = inputArray.length / 2; gap > 0;
-//                 gap = gap == 2 ? 1 : (int) ( gap / 2.2 ) )
-//                for( int i = gap; i < inputArray.length; i++ )
-//                {
-//                    int tmp = inputArray[ i ];
-//                    int j = i;
-//
-//                    for( ; j >= gap && tmp == inputArray[ j - gap ] < 0; j -= gap )
-//                    inputArray[ j ] = inputArray[ j - gap ];
-//                    inputArray[ j ] = tmp;
-//                }
-//        }
+        int gap = inputArray.length / 2;
+        while (gap > 0) {
+            for (int i = inputArray.length - 1 ; i >= inputArray.length - gap ; i--) {
 
+                for (int j = i; j - gap >= 0; j = j - gap) {
+                    if (inputArray[j] < inputArray[j - gap]) {
+                        swapElements(inputArray, j, j- gap);
+                    }
+                }
+
+            }
+            gap /= 2;
+        }
         return inputArray;
     }
+
+    
 }
