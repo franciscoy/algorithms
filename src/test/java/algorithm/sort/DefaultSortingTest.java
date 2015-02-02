@@ -10,8 +10,8 @@ import static org.junit.Assert.assertArrayEquals;
  */
 public abstract class DefaultSortingTest {
     private static final int[] ONE_ELEMENT_DATASET = {1};
-    private static final int[] UNSORTED_DATASET = {2,3,10,10,6,1,25,44,7};
-    private static final int[] SORTED_DATASET = {1,2,3,6,7,10,10,25,44};
+    protected static final int[] UNSORTED_DATASET = {2,3,10,10,6,1,25,44,7};
+    protected static final int[] SORTED_DATASET = {1,2,3,6,7,10,10,25,44};
 
     protected abstract SortingAlgorithm getSortingAlgorithm();
 
@@ -24,5 +24,4 @@ public abstract class DefaultSortingTest {
     public void testCorrectSortingOfUnsortedArray() {
         assertArrayEquals(getSortingAlgorithm().sort(UNSORTED_DATASET), SORTED_DATASET);
     }
-
 }
