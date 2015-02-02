@@ -1,12 +1,11 @@
 package algorithm.sort.impl;
 
-import algorithm.AbstractAlgorithm;
 import algorithm.sort.SortingAlgorithm;
 
 /**
  * Created by Francisco Yllera.
  */
-public class SelectionSort extends AbstractAlgorithm implements SortingAlgorithm {
+public class SelectionSort extends AbstractSortingAlgorithm implements SortingAlgorithm {
 
     @Override
     public int[] sort(int[] inputArray) {
@@ -24,8 +23,7 @@ public class SelectionSort extends AbstractAlgorithm implements SortingAlgorithm
                 }
             }
 
-            inputArray[lowestIndex] = inputArray[i];
-            inputArray[i] = currentLowest;
+            swapElements(inputArray, i, lowestIndex);
         }
 
         return inputArray;
