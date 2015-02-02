@@ -1,12 +1,11 @@
 package algorithm.sort.impl;
 
-import algorithm.AbstractAlgorithm;
 import algorithm.sort.SortingAlgorithm;
 
 /**
  * Created by Francisco Yllera.
  */
-public class MergeSort extends AbstractAlgorithm implements SortingAlgorithm {
+public class MergeSort extends AbstractSortingAlgorithm implements SortingAlgorithm {
 
     @Override
     public int[] sort(int[] inputArray) {

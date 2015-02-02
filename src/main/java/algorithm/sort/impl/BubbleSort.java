@@ -1,14 +1,11 @@
 package algorithm.sort.impl;
 
-import algorithm.AbstractAlgorithm;
 import algorithm.sort.SortingAlgorithm;
-
-import static algorithm.utils.ArrayPrintUtils.printArr;
 
 /**
  * Created by Francisco Yllera.
  */
-public class BubbleSort extends AbstractAlgorithm implements SortingAlgorithm{
+public class BubbleSort extends AbstractSortingAlgorithm implements SortingAlgorithm{
 
     @Override
     public int[] sort(int[] inputArray) {
@@ -18,8 +15,7 @@ public class BubbleSort extends AbstractAlgorithm implements SortingAlgorithm{
         for (int i = 0; i < inputArray.length - 1; i++) {
             int currentValue = inputArray[i];
             if (currentValue > inputArray[i + 1]) {
-                inputArray[i] = inputArray[i + 1];
-                inputArray[i + 1] = currentValue;
+                swapElements(inputArray, i, i+1);
                 swapped = true;
             }
         }

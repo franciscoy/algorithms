@@ -1,12 +1,11 @@
 package algorithm.sort.impl;
 
-import algorithm.AbstractAlgorithm;
 import algorithm.sort.SortingAlgorithm;
 
 /**
  * Created by Francisco Yllera.
  */
-public class InsertionSort extends AbstractAlgorithm implements SortingAlgorithm {
+public class InsertionSort extends AbstractSortingAlgorithm implements SortingAlgorithm {
 
     @Override
     public int[] sort(int[] inputArray) {
@@ -16,9 +15,7 @@ public class InsertionSort extends AbstractAlgorithm implements SortingAlgorithm
             currentValue=inputArray[i];
             for (int j = i; j > 0; j--) {
                 if (inputArray[j-1] > inputArray[j]) {
-                    //swap
-                    inputArray[j] = inputArray[j-1];
-                    inputArray[j-1] = currentValue;
+                    swapElements(inputArray, j, j-1);
                 }
             }
         }
