@@ -20,18 +20,15 @@ public class ShellSort extends AbstractSortingAlgorithm implements SortingAlgori
         int gap = inputArray.length / 2;
         while (gap > 0) {
             for (int i = inputArray.length - 1 ; i >= inputArray.length - gap ; i--) {
-
                 for (int j = i; j - gap >= 0; j = j - gap) {
                     if (inputArray[j] < inputArray[j - gap]) {
                         swapElements(inputArray, j, j- gap);
                     }
                 }
-
             }
             gap /= 2;
         }
         return inputArray;
     }
 
-    
 }
