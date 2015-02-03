@@ -1,9 +1,9 @@
 **Algorithms and Data structures** 
 =======
 --------
+(WIP)
 
-
-Algorithms:
+Algorithms(WIP):
 --
 
 - Sorting : 
@@ -12,6 +12,10 @@ Algorithms:
 	*	Selection Sort
 	*	Bubble Sort
 	* 	Shell Sort
+	
+	
+- Shuffle:
+	* Fisher-Yates / Knuth Shuffle
 
 
-(WIP)
+[![Build Status](https://drone.io/github.com/franciscoy/algorithms/status.png)](https://drone.io/github.com/franciscoy/algorithms/latest)
