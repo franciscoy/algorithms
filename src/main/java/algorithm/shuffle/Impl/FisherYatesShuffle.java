@@ -29,12 +29,4 @@ public class FisherYatesShuffle implements ShuffleAlgorithm{
 
         return inputArray;
     }
-
-    public static void main(String[] args) {
-        FisherYatesShuffle fisherYatesShuffle = new FisherYatesShuffle(new Random());
-        int[] input = {1,2,3,4};
-
-
-        printArr(fisherYatesShuffle.shuffle(input));
-    }
 }
