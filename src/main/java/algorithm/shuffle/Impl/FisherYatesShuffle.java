@@ -13,8 +13,8 @@ public class FisherYatesShuffle implements ShuffleAlgorithm{
 
     Random random;
 
-    public FisherYatesShuffle(Random randomGenerator) {
-        this.random = randomGenerator;
+    public FisherYatesShuffle(Random randomInput) {
+        this.random = randomInput;
     }
 
     @Override
