@@ -1,4 +1,4 @@
-package algorithms.shuffle.Impl;
+package algorithm.shuffle;
 
 import algorithm.shuffle.Impl.FisherYatesShuffle;
 import org.junit.Before;
