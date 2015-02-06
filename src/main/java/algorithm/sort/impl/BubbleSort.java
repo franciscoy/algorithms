@@ -13,8 +13,7 @@ public class BubbleSort extends AbstractSortingAlgorithm implements SortingAlgor
     while (swapped == true) {
         swapped = false;
         for (int i = 0; i < inputArray.length - 1; i++) {
-            int currentValue = inputArray[i];
-            if (currentValue > inputArray[i + 1]) {
+            if (inputArray[i] > inputArray[i + 1]) {
                 swapElements(inputArray, i, i+1);
                 swapped = true;
             }
