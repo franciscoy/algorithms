@@ -5,7 +5,7 @@ Counting Algorithms
 
 Count Inversions (Naive)
 ---------------------
-It counts the number of split array iterating each element and comparing with the rest of the array.
+It counts the number of split inverions iterating each element and comparing with the rest of the array.
 **It's not as performant as the MergeSort version.**
 
 |Complexity|            |
