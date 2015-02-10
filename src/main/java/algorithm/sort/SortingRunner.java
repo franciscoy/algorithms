@@ -4,6 +4,7 @@ import algorithm.sort.impl.InsertionSort;
 
 /**
  * Created by Francisco Yllera.
+ * WIP
  */
 public class SortingRunner {
     int[] sortingSmallDataset = {2,3,10,10,6,1,25,44,7};

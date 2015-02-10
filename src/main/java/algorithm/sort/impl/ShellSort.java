@@ -2,8 +2,6 @@ package algorithm.sort.impl;
 
 import algorithm.sort.SortingAlgorithm;
 
-import static algorithm.utils.ArrayPrintUtils.printArr;
-
 /**
  * Created by Francisco Yllera.
  */

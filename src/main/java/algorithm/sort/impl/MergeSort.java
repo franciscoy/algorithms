@@ -2,6 +2,8 @@ package algorithm.sort.impl;
 
 import algorithm.sort.SortingAlgorithm;
 
+import static algorithm.utils.ArrayUtils.copyArray;
+
 /**
  * Created by Francisco Yllera.
  */
@@ -23,25 +25,6 @@ public class MergeSort extends AbstractSortingAlgorithm implements SortingAlgori
         mergeOrderedArrays(firstArray, secondArray, inputArray);
 
         return inputArray;
-    }
-
-    /**
-     * Copies an array into a new one, not including the last index.
-     *
-     * @param  inputArray is the populated array
-     * @param  firstArrayIndex the index from which the array will be started to been copied
-     * @param  lastArrayIndex the final index to copy, not included in the copied array
-     * @return  an int array copied between the bounds
-     */
-    protected int[] copyArray(int[] inputArray, int firstArrayIndex, int lastArrayIndex) {
-        int[] copiedArray = new int[lastArrayIndex - firstArrayIndex];
-        int j = 0;
-        for (int i = firstArrayIndex; i < lastArrayIndex; i++) {
-            copiedArray[j] = inputArray[i];
-            j++;
-        }
-
-        return copiedArray;
     }
 
     /**
