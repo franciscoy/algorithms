@@ -63,14 +63,4 @@ public class MergeSortTest extends DefaultSortingTest {
         mergeSort.mergeOrderedArrays(EMPTY_ELEM_ARR, SEVERAL_ELEM_ARR, mergedArr2);
         assertArrayEquals(mergedArr2, SEVERAL_ELEM_ARR);
     }
-
-    @Test
-    public void testCopyArray() {
-        int startIndex = 0;
-        int lastIndex = SEVERAL_ELEM_EXPECTED_ARR.length - 2;
-        int[] copiedArray = mergeSort.copyArray(SEVERAL_ELEM_EXPECTED_ARR, startIndex, lastIndex);
-        int[] expectedArray = {4,8,15,16,23,42};
-
-        assertArrayEquals(copiedArray, expectedArray);
-    }
 }
