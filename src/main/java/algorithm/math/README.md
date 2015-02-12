@@ -13,3 +13,16 @@ Works by using the divide and sort approach, recursively dividing in 3 smaller s
 |----------|:-------------:|
 | Worst Case |  О(n^(log 3))  |
 
+Matrix Multiplication (Naive)
+---------------------
+
+Matrix multiplication is a binary operation that takes a pair of matrices, and produces another matrix.
+It's not implemented efficiently as the Strassen algorithm.
+
+|Complexity|            |
+|----------|:-------------:|
+| Worst Case |  О(n^3)  |
+| Avg. Case |  О(n^3)  |
+| Total Space |  О(n)  |
+| Aux Space |  О(1)  |
+
