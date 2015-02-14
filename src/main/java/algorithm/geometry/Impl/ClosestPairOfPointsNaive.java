@@ -46,19 +46,4 @@ public class ClosestPairOfPointsNaive implements ClosestPairOfPoints{
     protected double calculateDistance(Point a, Point b) {
         return Math.sqrt(Math.pow(b.getX() - a.getX(), 2d) + Math.pow(b.getY() - a.getY(), 2d));
     }
-
-    public static void main(String[] args) {
-        ClosestPairOfPointsNaive closestPairOfPoints = new ClosestPairOfPointsNaive();
-
-        Point a = new Point(-2,-3);
-        Point b = new Point(-4,4);
-        Point c = new Point(1, 1);
-        Point d = new Point(0, -2);
-
-        Point[] points = {a,b,c,d};
-//
-//        System.out.println(closestPairOfPoints.calculateDistance(a, b));
-
-        System.out.println(closestPairOfPoints.findClosestPairs(points));
-    }
 }
