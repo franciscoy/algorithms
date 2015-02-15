@@ -137,20 +137,4 @@ public class ClosestPairOfPointsDivideAndConquer extends AbstractClosestPairOfPo
         );
         return points;
     }
-
-    public static void main(String[] args) {
-        ClosestPairOfPointsDivideAndConquer cp = new ClosestPairOfPointsDivideAndConquer();
-
-        Point a = new Point(4,5);
-        Point b = new Point(2,4);
-        Point c = new Point(1,1);
-        Point d = new Point(3,1);
-        Point e = new Point(2,2);
-        Point f = new Point(2,3);
-
-        Point[] points = {e,a,b,c,d,f};
-
-        System.out.println(cp.findClosestPairs(points));
-
-    }
 }
