@@ -17,3 +17,14 @@ It's implemented naivley, such as for each point the distance to all the rest is
 | Total space |  О(n)  |
 | Aux space |  О(1)  |
 
+Closest Pair of Points (Divide and Conquer)
+---------------------
+Divide the array of Points until sub-array is small enough, find the closest pairs by brute force, and bottom up checking if there is a smaller closest pair with one point on each side of the divided array.
+
+
+|Complexity|            |
+|----------|:-------------:|
+| Worst Case |  О(n log n)  |
+| Avg. Case |  О(n log n)  |
+| Total space |  О(n)  |
+

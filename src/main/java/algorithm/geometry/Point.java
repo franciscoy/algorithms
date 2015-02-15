@@ -3,7 +3,7 @@ package algorithm.geometry;
 /**
  * Created by Francisco Yllera.
  */
-public class Point {
+public class Point extends Object{
     private int X;
     private int Y;
 

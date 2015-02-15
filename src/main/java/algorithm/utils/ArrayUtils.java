@@ -1,5 +1,7 @@
 package algorithm.utils;
 
+import algorithm.geometry.Point;
+
 import java.util.Arrays;
 
 /**
@@ -28,5 +30,20 @@ public class ArrayUtils {
         }
 
         return copiedArray;
+    }
+
+    public static Point[] copyArrayOfPoints(Point[] inputArray, int firstArrayIndex, int lastArrayIndex) {
+        Point[] copiedArray = new Point[lastArrayIndex - firstArrayIndex];
+        int j = 0;
+        for (int i = firstArrayIndex; i < lastArrayIndex; i++) {
+            copiedArray[j] = inputArray[i];
+            j++;
+        }
+
+        return copiedArray;
+    }
+
+    public static Point[] fullCopy(Point[] inputArray) {
+        return copyArrayOfPoints(inputArray, 0, inputArray.length);
     }
 }

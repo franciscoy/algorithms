@@ -1,49 +1,37 @@
 package algorithm.geometry.Impl;
 
 import algorithm.geometry.ClosestPairOfPoints;
+import algorithm.geometry.PairOfPoints;
 import algorithm.geometry.Point;
 
 /**
  * Created by Francisco Yllera.
  */
-public class ClosestPairOfPointsNaive implements ClosestPairOfPoints{
+public class ClosestPairOfPointsNaive extends AbstractClosestPairOfPoints implements ClosestPairOfPoints{
 
     /**
      * Find the closest pair of points in an array.
      * It does it naively/brute-force.
      * @param pointsArray
-     * @return
+     * @return PairOfPoints
      */
     @Override
-    public Point[] findClosestPairs(Point[] pointsArray) {
+    public PairOfPoints findClosestPairs(Point[] pointsArray) {
         if (pointsArray.length < 2) {
-            throw new IllegalArgumentException("Points array should contain 2 or more.");
+            return null;
         }
-        double minimumDistance = Double.MAX_VALUE;
         double currentDistance;
-        Point[] closest = {pointsArray[0], pointsArray[1]};
+        PairOfPoints closestPair = new PairOfPoints(pointsArray[0], pointsArray[1], Double.MAX_VALUE);
 
         for (int i = 0; i < pointsArray.length - 1; i++) {
             for (int j = i + 1; j < pointsArray.length; j++) {
                 currentDistance = calculateDistance(pointsArray[i], pointsArray[j]);
-                if (currentDistance < minimumDistance) {
-                    minimumDistance = currentDistance;
-                    closest[0] = pointsArray[i];
-                    closest[1] = pointsArray[j];
+                if (currentDistance < closestPair.getDistance()) {
+                    closestPair.reloadPoints(pointsArray[i], pointsArray[j], currentDistance);
                 }
             }
         }
 
-        return closest;
-    }
-
-    /**
-     * Calculate the euclidean distance from 2 points.
-     * @param a first point
-     * @param b second point
-     * @return euclidean distance of the points.
-     */
-    protected double calculateDistance(Point a, Point b) {
-        return Math.sqrt(Math.pow(b.getX() - a.getX(), 2d) + Math.pow(b.getY() - a.getY(), 2d));
+        return closestPair;
     }
 }
