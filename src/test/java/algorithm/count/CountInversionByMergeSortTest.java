@@ -5,7 +5,6 @@ package algorithm.count;
  */
 public class CountInversionByMergeSortTest extends CountInversionTest {
 
-
     @Override
     public CountInversion getCountInversion() {
         return new CountInversionByMergeSort();

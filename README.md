@@ -1,9 +1,8 @@
 **Algorithms and Data structures** 
 =======
 --------
-(WIP)
 
-Algorithms(WIP):
+Algorithms:
 --
 
 - Sorting : 
@@ -16,6 +15,18 @@ Algorithms(WIP):
 	
 - Shuffle:
 	* Fisher-Yates / Knuth Shuffle
+
+- Math:
+	* Karatsuba multiplication
+	* Matrix multiplication, naive
+
+- Count:
+	* Counting inversions, naive
+	* Counting inversions, merge sort
+	
+- Geometry:
+	* Closest pair of points, naive
+	* Closest pair of points, Divide and Conquer
 
 
 [![Build Status](https://drone.io/github.com/franciscoy/algorithms/status.png)](https://drone.io/github.com/franciscoy/algorithms/latest)
