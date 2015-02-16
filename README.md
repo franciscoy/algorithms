@@ -11,6 +11,7 @@ Algorithms:
 	*	Selection Sort
 	*	Bubble Sort
 	* 	Shell Sort
+	*	Quick Sort
 
 - Search:
 	* Linear search

@@ -19,7 +19,7 @@ For smaller arrays its the preferred algorithm.
 
 |Complexity|            |
 |----------|:-------------:|
-| Avg. Time |  О(n2)  |
+| Avg. Time |  О(n^2)  |
 | Space total |    О(n)    |
 | Aux | О(1)  |
  
@@ -36,7 +36,7 @@ For smaller arrays its the preferred algorithm.
  
 |Complexity		|            |
 |----------		|:-------------:|
-| Avg. Time 	|  О(n2)  |
+| Avg. Time 	|  О(n^2)  |
 | Space total 	|    О(n)    |
 | Aux | О(1)  	|
  
@@ -55,7 +55,7 @@ For smaller arrays its the preferred algorithm.
  
 |Complexity		|            |
 |----------		|:-------------:|
-| Avg. Time 	|  О(n2)  |
+| Avg. Time 	|  О(n^2)  |
 | Space total 	|    О(n)    |
 | Aux | О(1)  	|
  
@@ -75,7 +75,7 @@ For smaller arrays its the preferred algorithm.
 |Complexity		|            |
 |----------		|:-------------:|
 | Avg. Time 	|  depends on gap |
-| worst case	|  O(n2) |
+| Worst case	|  O(n^2) |
 | Space total 	|    О(n)    |
 | Aux | О(1)  	|
  
@@ -95,3 +95,21 @@ Conceptually, a merge sort works as follows:
 |----------|:-------------:|
 | Avg. Time |  O(n log n)  |
 | Space |    O(n)    |
+
+ -------  
+Quick Sort
+---------------------
+
+**Quicksort** is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation (formally, a total order) is defined. In efficient implementations it is not a stable sort, meaning that the relative order of equal sort items is not preserved. Quicksort can operate in-place on an array, requiring small additional amounts of memory to perform the sorting.
+
+Mathematical analysis of quicksort shows that, on average, the algorithm takes O(n log n) comparisons to sort n items. In the worst case, it makes O(n2) comparisons, though this behavior is rare.
+
+ - *Unstable*
+ - *In-place*
+
+|Complexity|            |
+|----------|:-------------:|
+| Avg. Time |  O(n log n)  |
+| Worst case	|  O(n^2) |
+| Total Space |    O(n)    |
+| Aux Space |    O(1)    |
