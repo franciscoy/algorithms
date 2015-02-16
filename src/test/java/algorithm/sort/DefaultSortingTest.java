@@ -2,6 +2,7 @@ package algorithm.sort;
 
 import org.junit.Test;
 
+import static algorithm.utils.ArrayUtils.printArr;
 import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.assertArrayEquals;
 
