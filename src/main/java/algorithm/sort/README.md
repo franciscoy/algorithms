@@ -112,4 +112,4 @@ Mathematical analysis of quicksort shows that, on average, the algorithm takes O
 | Avg. Time |  O(n log n)  |
 | Worst case	|  O(n^2) |
 | Total Space |    O(n)    |
-| Aux Space |    O(1)    |
+| Aux Space |    O(log n)    |
