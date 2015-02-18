@@ -4,6 +4,7 @@ import algorithm.sort.DefaultSortingTest;
 import algorithm.sort.SortingAlgorithm;
 import org.junit.Test;
 
+import static algorithm.utils.ArrayUtils.printArr;
 import static org.junit.Assert.*;
 
 public class QuickSortTest  extends DefaultSortingTest {

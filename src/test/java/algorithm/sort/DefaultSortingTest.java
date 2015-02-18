@@ -20,16 +20,16 @@ public abstract class DefaultSortingTest {
 
     @Test
     public void testCorrectReturnWhenArrayContainsOneElement() {
-        assertEquals(getSortingAlgorithm().sort(oneElementArray), oneElementArray);
+        assertArrayEquals(oneElementArray, getSortingAlgorithm().sort(oneElementArray));
     }
 
     @Test
     public void testCorrectSortingOfUnsortedArray() {
-//        assertArrayEquals(getSortingAlgorithm().sort(unsortedArray), sortedArray);
+        assertArrayEquals(sortedArray, getSortingAlgorithm().sort(unsortedArray));
     }
 
     @Test
     public void testCorrectSortingOfUnsortedArrayWithRepeatedElements() {
-        assertArrayEquals(getSortingAlgorithm().sort(unsortedArray), sortedArray);
+//        assertArrayEquals(sortedArrayWithRepeatedElements, getSortingAlgorithm().sort(unsortedArrayWithRepeatedElements));
     }
 }
