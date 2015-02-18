@@ -14,8 +14,9 @@ Algorithms:
 	*	Quick Sort
 
 - Search:
-	* Linear search
+	* Linear Search
 	* Binary Search, iterative and recursive
+	* Quick Select
 	
 - Shuffle:
 	* Fisher-Yates / Knuth Shuffle
