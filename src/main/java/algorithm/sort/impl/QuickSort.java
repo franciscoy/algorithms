@@ -2,6 +2,7 @@ package algorithm.sort.impl;
 
 import algorithm.sort.SortingAlgorithm;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import static algorithm.utils.ArrayUtils.printArr;
@@ -13,6 +14,14 @@ public class QuickSort extends AbstractSortingAlgorithm implements SortingAlgori
 
     Random random = new Random();
 
+    /**
+     * Quick sort by divide and conquer.
+     * Partition elements left and right to a randomly selected pivot, therefore sorting the pivot.
+     * Then recursively sorting the left and right pivots in their positions;
+     * Avg case O(n log n), worst case O(n^2), but with the random pivots most of the time its avg case.
+     * @param inputArray
+     * @return sorted array
+     */
     @Override
     public int[] sort(int[] inputArray) {
         if (inputArray.length < 2) {
@@ -21,16 +30,6 @@ public class QuickSort extends AbstractSortingAlgorithm implements SortingAlgori
         return sortDivideAndConquer(inputArray, 0, inputArray.length - 1);
     }
 
-    /**
-     * Quick sort by divide and conquer.
-     * Partition elements left and right to a randomly selected pivot, therefore sorting the pivot.
-     * Then recursively sorting the left and right pivots in their positions;
-     * Avg case O(n log n), worst case O(n^2), but with the random pivots most of the time its avg case.
-     * @param inputArray
-     * @param startIndex
-     * @param endIndex
-     * @return
-     */
     protected int[] sortDivideAndConquer(int[] inputArray, int startIndex, int endIndex) {
         if(endIndex - startIndex == 0 || endIndex < startIndex) {
             return null;
@@ -47,7 +46,7 @@ public class QuickSort extends AbstractSortingAlgorithm implements SortingAlgori
     /**
      * Partition the array by a random pivot, the elements lower than the pivot's value go to the left,
      * the bigger to the right, they don't need to be ordered.
-     * Since it scans the array once it's, O(n).
+     * Since it scans the array once, it's O(n).
      * @param inputArray
      * @param startIndex
      * @param endIndex
@@ -58,7 +57,6 @@ public class QuickSort extends AbstractSortingAlgorithm implements SortingAlgori
         if (pivotIndex > startIndex) {
             swapElements(inputArray, pivotIndex, startIndex);
         }
-        int pivotPosition = pivotIndex;
         int orderedBound = startIndex + 1;
         for (int i = startIndex + 1; i <= endIndex; i++) {
             if(inputArray[i] <= inputArray[startIndex]) {
@@ -66,11 +64,13 @@ public class QuickSort extends AbstractSortingAlgorithm implements SortingAlgori
                 orderedBound++;
             }
         }
+
         if (orderedBound > 1) {
             swapElements(inputArray, startIndex, orderedBound - 1);
-            pivotPosition = orderedBound - 1;
+            return orderedBound - 1;
+        } else {
+            return startIndex;
         }
-        return pivotPosition;
     }
 
     /**
@@ -81,13 +81,5 @@ public class QuickSort extends AbstractSortingAlgorithm implements SortingAlgori
      */
     protected int choosePivot(int startIndex, int endIndex) {
         return random.nextInt(endIndex - startIndex + 1) + startIndex;
-    }
-
-    public static void main(String[] args) {
-        QuickSort qs = new QuickSort();
-        int[] ia = {3};
-//
-//        printArr(qs.partitionByPivot(ia, 0, ia.length, 4));
-        printArr(qs.sort(ia));
     }
 }

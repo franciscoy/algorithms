@@ -31,3 +31,19 @@ Otherwise, if the search key is less than the middle element's key, then the alg
 | Avg. Case |  О(log n)  |
 | Total space |  О(n)  |
 | Aux space |  О(1)  |
+
+Quick Select
+---------------------
+**Quickselect** is a **selection algorithm** to find the kth smallest element in an unordered list. Like quicksort, it is efficient in practice and has good average-case performance, but has poor worst-case performance.
+
+Quickselect uses the same overall approach as quicksort, choosing one element as a pivot and partitioning the data in two based on the pivot, accordingly as less than or greater than the pivot. However, instead of recursing into both sides, as in quicksort, quickselect only recurses into one side – the side with the element it is searching for. This reduces the average complexity from O(n log n) (in quicksort) to O(n) (in quickselect).
+
+- In-place
+
+|Complexity|            |
+|----------|:-------------:|
+| Worst Case |  О(n^2)  |
+| Avg. Case |  О(n)  |
+| Best Case |  О(n)  |
+| Total space |  О(n)  |
+| Aux space |  О(1)  |
