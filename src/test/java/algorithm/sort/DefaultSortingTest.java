@@ -30,6 +30,6 @@ public abstract class DefaultSortingTest {
 
     @Test
     public void testCorrectSortingOfUnsortedArrayWithRepeatedElements() {
-//        assertArrayEquals(sortedArrayWithRepeatedElements, getSortingAlgorithm().sort(unsortedArrayWithRepeatedElements));
+        assertArrayEquals(sortedArrayWithRepeatedElements, getSortingAlgorithm().sort(unsortedArrayWithRepeatedElements));
     }
 }
