@@ -11,10 +11,10 @@ public class ShellSort extends AbstractSortingAlgorithm implements SortingAlgori
     public int[] sort(int[] inputArray) {
         int gap = inputArray.length / 2;
         while (gap > 0) {
-            for (int i = inputArray.length - 1 ; i >= inputArray.length - gap ; i--) {
-                for (int j = i; j - gap >= 0; j = j - gap) {
-                    if (inputArray[j] < inputArray[j - gap]) {
-                        swapElements(inputArray, j, j- gap);
+            for (int i = 0; i < (inputArray.length - gap); i++) {
+                for (int j = i; j + gap < inputArray.length ; j = j + gap) {
+                    if (inputArray[j] > inputArray[j + gap]) {
+                        swapElements(inputArray, j, j+ gap);
                     }
                 }
             }

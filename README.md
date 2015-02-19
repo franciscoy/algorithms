@@ -11,10 +11,12 @@ Algorithms:
 	*	Selection Sort
 	*	Bubble Sort
 	* 	Shell Sort
+	*	Quick Sort
 
 - Search:
-	* Linear search
+	* Linear Search
 	* Binary Search, iterative and recursive
+	* Quick Select
 	
 - Shuffle:
 	* Fisher-Yates / Knuth Shuffle
