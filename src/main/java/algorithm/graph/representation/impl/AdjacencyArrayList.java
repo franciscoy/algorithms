@@ -3,6 +3,7 @@ package algorithm.graph.representation.impl;
 import algorithm.graph.representation.AdjacencyList;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -10,7 +11,7 @@ import java.util.Map;
  * Created by Francisco Yllera.
  */
 public class AdjacencyArrayList implements AdjacencyList{
-    private Map<Integer, List<Integer>> adjacencyList;
+    private Map<Integer, List<Integer>> adjacencyList = new HashMap<>();
 
     @Override
     public List<Integer> getNeighbors(int vertex) {
