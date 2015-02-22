@@ -33,5 +33,8 @@ Algorithms:
 	* Closest pair of points, naive
 	* Closest pair of points, Divide and Conquer
 
+- Graph:
+	* Karger Min-Cut algorithm
+
 
 [![Build Status](https://drone.io/github.com/franciscoy/algorithms/status.png)](https://drone.io/github.com/franciscoy/algorithms/latest)
