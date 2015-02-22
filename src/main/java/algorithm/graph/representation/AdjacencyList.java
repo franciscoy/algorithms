@@ -17,4 +17,5 @@ public interface AdjacencyList {
     public void addNeighborsList(int vertex, List<Integer> neighborsList);
 
     public AdjacencyList deepClone();
+    public void print();
 }

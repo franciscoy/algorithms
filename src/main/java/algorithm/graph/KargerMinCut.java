@@ -18,15 +18,14 @@ public class KargerMinCut {
         int minCut = Integer.MAX_VALUE;
         for (int i = 0; i < getIterationsByVerticlesSize(list); i++) {
             AdjacencyList clonedList = list.deepClone();
-
             while(clonedList.getVertices().size() > 2) {
                 int randomVertex = pickRandomVertex(clonedList);
                 contractEdge(clonedList, randomVertex, pickRandomNeighbor(clonedList, randomVertex));
             }
 
             int firstVertex = clonedList.getVertices().keySet().iterator().next();
-            if (list.getNeighbors(firstVertex).size() < minCut) {
-                minCut = list.getNeighbors(firstVertex).size();
+            if (clonedList.getNeighbors(firstVertex).size() < minCut) {
+                minCut = clonedList.getNeighbors(firstVertex).size();
             }
         }
 
@@ -34,7 +33,8 @@ public class KargerMinCut {
     }
 
     /**
-     *
+     * Function to calculate the times the algorithm need to run to have
+     * high chance of finding the minimum cut.
      */
     public int getIterationsByVerticlesSize(AdjacencyList list) {
         int n = list.getVertices().size();
@@ -49,7 +49,6 @@ public class KargerMinCut {
      */
     protected int pickRandomNeighbor(AdjacencyList list, int vertex) {
         List<Integer> neighbors = list.getNeighbors(vertex);
-        System.out.println(" " + vertex + " neighbors " + neighbors);
         return neighbors.get(random.nextInt(neighbors.size()));
 
     }
@@ -102,56 +101,5 @@ public class KargerMinCut {
         }
 
         list.removeVertex(vertex2);
-    }
-
-    public static void main(String[] args) {
-        KargerMinCut kargerMinCut = new KargerMinCut();
-        int min = kargerMinCut.minCut(getAdjacencyArrayListForMultiGraph());
-        System.out.println(min);
-    }
-
-    public static AdjacencyList getAdjacencyArrayListForBasicGraph() {
-        AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
-
-        adjacencyArrayList.addVertex(1);
-        adjacencyArrayList.addVertex(2);
-        adjacencyArrayList.addVertex(3);
-        adjacencyArrayList.addVertex(4);
-
-        adjacencyArrayList.addNeighbor(1, 2);
-        adjacencyArrayList.addNeighbor(2, 1);
-        adjacencyArrayList.addNeighbor(2, 3);
-        adjacencyArrayList.addNeighbor(3, 2);
-        adjacencyArrayList.addNeighbor(3, 4);
-        adjacencyArrayList.addNeighbor(4, 3);
-
-        return adjacencyArrayList;
-    }
-
-    public static AdjacencyList getAdjacencyArrayListForMultiGraph() {
-        AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
-
-        adjacencyArrayList.addVertex(1);
-        adjacencyArrayList.addVertex(2);
-        adjacencyArrayList.addVertex(3);
-        adjacencyArrayList.addVertex(4);
-
-        adjacencyArrayList.addNeighbor(1, 2);
-        adjacencyArrayList.addNeighbor(1, 2);
-
-        adjacencyArrayList.addNeighbor(2, 1);
-        adjacencyArrayList.addNeighbor(2, 1);
-
-        adjacencyArrayList.addNeighbor(2, 3);
-        adjacencyArrayList.addNeighbor(2, 3);
-
-        adjacencyArrayList.addNeighbor(3, 2);
-        adjacencyArrayList.addNeighbor(3, 2);
-
-        adjacencyArrayList.addNeighbor(3, 4);
-
-        adjacencyArrayList.addNeighbor(4, 3);
-
-        return adjacencyArrayList;
     }
 }

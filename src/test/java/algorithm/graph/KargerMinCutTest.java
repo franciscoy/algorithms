@@ -8,13 +8,44 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
+// TODO mock Random Obj to make it deterministic
 public class KargerMinCutTest {
 
+    KargerMinCut kargerMinCut = new KargerMinCut();
+
+    @Test
+    public void whenFindingTheMinCutFromBasicGraphReturnsCorrect() {
+        AdjacencyList adjacencyArrayListForTest = getAdjacencyArrayListForBasicGraph();
+        int minCut = kargerMinCut.minCut(adjacencyArrayListForTest);
+
+        assertEquals(1, minCut);
+    }
+
+    /**
+     * Watch out, non-deterministic
+     */
+    @Test
+    public void whenFindingTheMinCutFromMultiGraphReturnsCorrect() {
+        AdjacencyList adjacencyArrayListForTest = getAdjacencyArrayListForMultiGraph();
+        int minCut = kargerMinCut.minCut(adjacencyArrayListForTest);
+
+        assertEquals(1, minCut);
+    }
+
+    /**
+     * Wach out, non-deterministic
+     */
+    @Test
+    public void whenFindingTheMinCutFromCyclicMultiGraphReturnsCorrect() {
+        AdjacencyList adjacencyArrayListForTest = getAdjacencyArrayListForCyclicMultiGraph();
+        int minCut = kargerMinCut.minCut(adjacencyArrayListForTest);
+
+        assertEquals(2, minCut);
+    }
 
     @Test
     public void whenContractingEdgeOnBasicGraphWorksOk() {
         AdjacencyList adjacencyArrayListForTest = getAdjacencyArrayListForBasicGraph();
-        KargerMinCut kargerMinCut = new KargerMinCut();
 
         kargerMinCut.contractEdge(adjacencyArrayListForTest, 1, 2);
 
@@ -37,7 +68,6 @@ public class KargerMinCutTest {
     @Test
     public void whenContractingEdgeOnMultiGraphWorksOk() {
         AdjacencyList adjacencyArrayListForTest = getAdjacencyArrayListForMultiGraph();
-        KargerMinCut kargerMinCut = new KargerMinCut();
 
         kargerMinCut.contractEdge(adjacencyArrayListForTest, 1, 2);
 
@@ -60,7 +90,7 @@ public class KargerMinCutTest {
     }
 
     /**
-     * Graph:
+     * Acyclic Graph:
      *  V(1) - V(2) - V(3) - V(4)
      */
     public AdjacencyList getAdjacencyArrayListForBasicGraph() {
@@ -82,7 +112,7 @@ public class KargerMinCutTest {
     }
 
     /**
-     * Multi Graph:
+     * Acyclic Multi Graph:
      *  V(1) = V(2) = V(3) - V(4)
      */
     public AdjacencyList getAdjacencyArrayListForMultiGraph() {
@@ -108,6 +138,42 @@ public class KargerMinCutTest {
         adjacencyArrayList.addNeighbor(3, 4);
 
         adjacencyArrayList.addNeighbor(4, 3);
+
+        return adjacencyArrayList;
+    }
+
+    /**
+     * Cyclic Multi Graph:
+     *  V(1) = V(2) = V(3) - V(4)
+     *   ^--------------------^
+     */
+    public AdjacencyList getAdjacencyArrayListForCyclicMultiGraph() {
+        AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
+
+        adjacencyArrayList.addVertex(1);
+        adjacencyArrayList.addVertex(2);
+        adjacencyArrayList.addVertex(3);
+        adjacencyArrayList.addVertex(4);
+
+        adjacencyArrayList.addNeighbor(1, 2);
+        adjacencyArrayList.addNeighbor(1, 2);
+
+        adjacencyArrayList.addNeighbor(2, 1);
+        adjacencyArrayList.addNeighbor(2, 1);
+
+        adjacencyArrayList.addNeighbor(2, 3);
+        adjacencyArrayList.addNeighbor(2, 3);
+
+        adjacencyArrayList.addNeighbor(3, 2);
+        adjacencyArrayList.addNeighbor(3, 2);
+
+        adjacencyArrayList.addNeighbor(3, 4);
+
+        adjacencyArrayList.addNeighbor(4, 3);
+
+        adjacencyArrayList.addNeighbor(1, 4);
+
+        adjacencyArrayList.addNeighbor(4, 1);
 
         return adjacencyArrayList;
     }

@@ -64,14 +64,21 @@ public class AdjacencyArrayList implements AdjacencyList{
      * @return
      */
     @Override
-    public AdjacencyList deepClone() {
+    public synchronized AdjacencyList deepClone() {
         AdjacencyArrayList copiedAdjacencyArrayList = new AdjacencyArrayList();
 
         for(Map.Entry<Integer, List<Integer>> vertex : adjacencyList.entrySet()){
             int vertexValue = vertex.getKey().intValue();
             copiedAdjacencyArrayList.addVertex(vertexValue);
-            copiedAdjacencyArrayList.addNeighborsList(vertexValue, adjacencyList.get(vertexValue));
+            copiedAdjacencyArrayList.addNeighborsList(vertexValue, new ArrayList<>(adjacencyList.get(vertexValue)));
         }
         return copiedAdjacencyArrayList;
+    }
+
+    @Override
+    public void print() {
+        for(Map.Entry<Integer, List<Integer>> vertex : adjacencyList.entrySet()){
+            System.out.println(vertex);
+        }
     }
 }
