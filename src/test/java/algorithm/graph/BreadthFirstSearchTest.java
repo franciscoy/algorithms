@@ -1,7 +1,5 @@
 package algorithm.graph;
 
-import algorithm.graph.representation.AdjacencyList;
-import algorithm.graph.representation.impl.AdjacencyArrayList;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -22,7 +20,7 @@ public class BreadthFirstSearchTest extends GraphTest{
 
     @Test
     public void whenSearchingVertexInAnUnconnectedCyclicGraphReturnFailure() {
-        assertEquals(-1, breadthFirstSearch.findVertex(getAdjacencyArrayListForUnconectedCyclicGraph(), 1, 7));
+        assertEquals(-1, breadthFirstSearch.findVertex(getAdjacencyArrayListForUnconnectedCyclicGraph(), 1, 7));
     }
 
     @Test
