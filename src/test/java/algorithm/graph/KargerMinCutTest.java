@@ -8,8 +8,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-// TODO mock Random Obj to make it deterministic
-public class KargerMinCutTest {
+public class KargerMinCutTest extends GraphTest{
 
     KargerMinCut kargerMinCut = new KargerMinCut();
 
@@ -21,9 +20,6 @@ public class KargerMinCutTest {
         assertEquals(1, minCut);
     }
 
-    /**
-     * Watch out, non-deterministic
-     */
     @Test
     public void whenFindingTheMinCutFromMultiGraphReturnsCorrect() {
         AdjacencyList adjacencyArrayListForTest = getAdjacencyArrayListForMultiGraph();
@@ -32,9 +28,6 @@ public class KargerMinCutTest {
         assertEquals(1, minCut);
     }
 
-    /**
-     * Wach out, non-deterministic
-     */
     @Test
     public void whenFindingTheMinCutFromCyclicMultiGraphReturnsCorrect() {
         AdjacencyList adjacencyArrayListForTest = getAdjacencyArrayListForCyclicMultiGraph();
@@ -87,94 +80,5 @@ public class KargerMinCutTest {
         assertEquals(expectedVertex3Neighbors, adjacencyArrayListForTest.getNeighbors(3));
         assertEquals(expectedVertex4Neighbors, adjacencyArrayListForTest.getNeighbors(4));
         assertEquals(null, adjacencyArrayListForTest.getNeighbors(2));
-    }
-
-    /**
-     * Acyclic Graph:
-     *  V(1) - V(2) - V(3) - V(4)
-     */
-    public AdjacencyList getAdjacencyArrayListForBasicGraph() {
-        AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
-
-        adjacencyArrayList.addVertex(1);
-        adjacencyArrayList.addVertex(2);
-        adjacencyArrayList.addVertex(3);
-        adjacencyArrayList.addVertex(4);
-
-        adjacencyArrayList.addNeighbor(1, 2);
-        adjacencyArrayList.addNeighbor(2, 1);
-        adjacencyArrayList.addNeighbor(2, 3);
-        adjacencyArrayList.addNeighbor(3, 2);
-        adjacencyArrayList.addNeighbor(3, 4);
-        adjacencyArrayList.addNeighbor(4, 3);
-
-        return adjacencyArrayList;
-    }
-
-    /**
-     * Acyclic Multi Graph:
-     *  V(1) = V(2) = V(3) - V(4)
-     */
-    public AdjacencyList getAdjacencyArrayListForMultiGraph() {
-        AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
-
-        adjacencyArrayList.addVertex(1);
-        adjacencyArrayList.addVertex(2);
-        adjacencyArrayList.addVertex(3);
-        adjacencyArrayList.addVertex(4);
-
-        adjacencyArrayList.addNeighbor(1, 2);
-        adjacencyArrayList.addNeighbor(1, 2);
-
-        adjacencyArrayList.addNeighbor(2, 1);
-        adjacencyArrayList.addNeighbor(2, 1);
-
-        adjacencyArrayList.addNeighbor(2, 3);
-        adjacencyArrayList.addNeighbor(2, 3);
-
-        adjacencyArrayList.addNeighbor(3, 2);
-        adjacencyArrayList.addNeighbor(3, 2);
-
-        adjacencyArrayList.addNeighbor(3, 4);
-
-        adjacencyArrayList.addNeighbor(4, 3);
-
-        return adjacencyArrayList;
-    }
-
-    /**
-     * Cyclic Multi Graph:
-     *  V(1) = V(2) = V(3) - V(4)
-     *   ^--------------------^
-     */
-    public AdjacencyList getAdjacencyArrayListForCyclicMultiGraph() {
-        AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
-
-        adjacencyArrayList.addVertex(1);
-        adjacencyArrayList.addVertex(2);
-        adjacencyArrayList.addVertex(3);
-        adjacencyArrayList.addVertex(4);
-
-        adjacencyArrayList.addNeighbor(1, 2);
-        adjacencyArrayList.addNeighbor(1, 2);
-
-        adjacencyArrayList.addNeighbor(2, 1);
-        adjacencyArrayList.addNeighbor(2, 1);
-
-        adjacencyArrayList.addNeighbor(2, 3);
-        adjacencyArrayList.addNeighbor(2, 3);
-
-        adjacencyArrayList.addNeighbor(3, 2);
-        adjacencyArrayList.addNeighbor(3, 2);
-
-        adjacencyArrayList.addNeighbor(3, 4);
-
-        adjacencyArrayList.addNeighbor(4, 3);
-
-        adjacencyArrayList.addNeighbor(1, 4);
-
-        adjacencyArrayList.addNeighbor(4, 1);
-
-        return adjacencyArrayList;
     }
 }
