@@ -97,7 +97,7 @@ public abstract class GraphTest {
         return adjacencyArrayList;
     }
 
-    public static AdjacencyList getAdjacencyArrayListForCyclicGraph() {
+    public AdjacencyList getAdjacencyArrayListForCyclicGraph() {
         AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
 
         adjacencyArrayList.addVertex(1);
@@ -124,7 +124,7 @@ public abstract class GraphTest {
         return adjacencyArrayList;
     }
 
-    public static AdjacencyList getAdjacencyArrayListForUnconectedCyclicGraph() {
+    public AdjacencyList getAdjacencyArrayListForUnconnectedCyclicGraph() {
         AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
 
         adjacencyArrayList.addVertex(1);

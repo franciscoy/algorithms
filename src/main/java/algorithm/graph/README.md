@@ -28,6 +28,12 @@ Breadth-first search (BFS) is an algorithm for traversing or searching tree or g
 (|N| = vertices count
 |E| = edges count)
 
+Basic Shortest Path
+---------------------
+
+Basic Shortest path based on Breadth First Search,
+in which neighbors from current vertex get current vertex distance to root + 1
+
 ---------------------------------------------------------------
 ---------------------
 
