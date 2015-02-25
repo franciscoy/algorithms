@@ -1,23 +1,23 @@
 package algorithm.graph;
 
 import algorithm.graph.representation.AdjacencyList;
-import algorithm.graph.representation.impl.AdjacencyArrayList;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * Created by Francisco Yllera.
  */
-public class BreadthFirstSearch implements GraphSearch{
+public class DeepFirstSearch implements GraphSearch{
 
     /**
-     * Graph search by neighbor's layers.
-     * Uses a FIFO list (Queue) to maintain an order of the next vertices to be inspected
-     *      a Set to check if vertex has been inspected.
+     * Graph search by deep neighbour inspections.
+     * Goes to the bottom until there's no neighbors left and then start to backtrack.
+     * Same impl than BFS but with a Stack instead of Queue.
      *
-     * Search by adjacency if any of the neighbors is the one to be found.
+     * Uses a LIFO list (Stack) to deep inspect the last neighbour added
+     *      a Set to check if vertex has been inspected.
      *
      * O(n+m), linear complexity.
      * @param adjacencyList
@@ -30,7 +30,7 @@ public class BreadthFirstSearch implements GraphSearch{
             return vertexToFind;
         }
         HashSet<Integer> verticesInspected = new HashSet<>();
-        Queue<Integer> verticesToInspect = new LinkedList<>();
+        Deque<Integer> verticesToInspect = new ArrayDeque<Integer>();
 
         verticesToInspect.add(rootVertex);
         verticesInspected.add(rootVertex);
@@ -43,7 +43,7 @@ public class BreadthFirstSearch implements GraphSearch{
                 if (neighbour == vertexToFind) {
                     return neighbour;
                 }
-                verticesToInspect.add(neighbour);
+                verticesToInspect.addFirst(neighbour);
                 verticesInspected.add(neighbour);
             }
         }

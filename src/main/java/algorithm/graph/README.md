@@ -16,6 +16,7 @@ By iterating this basic algorithm a sufficient number of times, a minimum cut ca
 |----------|:-------------:|
 | Avg Case |  О(n^2 log^3 n)  |
 
+
 Breadth First Search
 ---------------------
 
@@ -28,6 +29,17 @@ Breadth-first search (BFS) is an algorithm for traversing or searching tree or g
 (|N| = vertices count
 |E| = edges count)
 
+
+Deep First Search
+---------------------
+
+Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. One starts at the root (selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before backtracking.
+
+|Complexity|            |
+|----------|:-------------:|
+| Worst Case |  О(|E|)  |
+
+
 Basic Shortest Path (BFS)
 ---------------------
 
@@ -37,6 +49,7 @@ in which neighbors from current vertex get current vertex distance to root + 1
 |Complexity|            |
 |----------|:-------------:|
 | Worst Case |  О(|N|+|E|)  |
+
 
 Count Connected Components (BFS)
 ---------------------

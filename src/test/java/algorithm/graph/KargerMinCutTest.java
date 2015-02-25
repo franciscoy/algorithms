@@ -28,6 +28,9 @@ public class KargerMinCutTest extends GraphTest{
         assertEquals(1, minCut);
     }
 
+    /**
+     * Non-deterministic due to randomized behaviour, need to mock Random Obj.
+     */
     @Test
     public void whenFindingTheMinCutFromCyclicMultiGraphReturnsCorrect() {
         AdjacencyList adjacencyArrayListForTest = getAdjacencyArrayListForCyclicMultiGraph();
