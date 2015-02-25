@@ -50,4 +50,36 @@ public class DeepFirstSearch implements GraphSearch{
 
         return -1;
     }
+
+    /**
+     * Using the method call stack as the algorithm stack.
+     * Same logic as the iterative algorithm.
+     *
+     * @param adjacencyList
+     * @param rootVertex
+     * @param vertexToFind
+     * @return
+     */
+    public int recursiveFindVertex(AdjacencyList adjacencyList, int rootVertex, int vertexToFind) {
+        if (rootVertex == vertexToFind) {
+            return vertexToFind;
+        }
+        HashSet<Integer> verticesInspected = new HashSet<>();
+        verticesInspected.add(rootVertex);
+        return recursiveFindVertex(adjacencyList, verticesInspected, rootVertex, vertexToFind);
+    }
+
+    protected int recursiveFindVertex(AdjacencyList adjacencyList, HashSet<Integer> verticesInspected, int currentVertex, int vertexToFind) {
+        for (int neighbour : adjacencyList.getNeighbors(currentVertex)) {
+            if (verticesInspected.contains(neighbour)){
+                continue;
+            }
+            if (neighbour == vertexToFind) {
+                return neighbour;
+            }
+            verticesInspected.add(neighbour);
+            return recursiveFindVertex(adjacencyList, verticesInspected, neighbour, vertexToFind);
+        }
+        return -1;
+    }
 }

@@ -36,7 +36,7 @@ Algorithms:
 - Graph:
 	* Karger Min-Cut algorithm
 	* Breadth First Search
-	* Deep First Search
+	* Deep First Search, Iterative and Recursive
 	* Basic Shortest Path (BFS)
 	* Count Connected Components (BFS)
 
