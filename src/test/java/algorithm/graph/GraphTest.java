@@ -156,4 +156,16 @@ public abstract class GraphTest {
 
         return adjacencyArrayList;
     }
+
+    public AdjacencyList getAdjacencyArrayListForTotallyUnconnectedCyclicGraph() {
+        AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
+
+        adjacencyArrayList.addVertex(1);
+        adjacencyArrayList.addVertex(2);
+        adjacencyArrayList.addVertex(3);
+        adjacencyArrayList.addVertex(4);
+        adjacencyArrayList.addVertex(5);
+
+        return adjacencyArrayList;
+    }
 }

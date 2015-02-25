@@ -28,11 +28,26 @@ Breadth-first search (BFS) is an algorithm for traversing or searching tree or g
 (|N| = vertices count
 |E| = edges count)
 
-Basic Shortest Path
+Basic Shortest Path (BFS)
 ---------------------
 
 Basic Shortest path based on Breadth First Search,
 in which neighbors from current vertex get current vertex distance to root + 1
+
+|Complexity|            |
+|----------|:-------------:|
+| Worst Case |  О(|N|+|E|)  |
+
+Count Connected Components (BFS)
+---------------------
+
+It is straightforward to compute the connected components of a graph in linear time (in terms of the numbers of the vertices and edges of the graph) using either **breadth-first search** or **depth-first search**. In either case, a search that begins at some particular vertex v will find the entire connected component containing v (and no more) before returning. To find all the connected components of a graph, loop through its vertices, starting a new breadth first or depth first search whenever the loop reaches a vertex that has not already been included in a previously found connected component.
+
+|Complexity|            |
+|----------|:-------------:|
+| Worst Case |  О(|N|+|E|)  |
+
+
 
 ---------------------------------------------------------------
 ---------------------

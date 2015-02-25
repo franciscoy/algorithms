@@ -36,7 +36,8 @@ Algorithms:
 - Graph:
 	* Karger Min-Cut algorithm
 	* Breadth First Search
-	* Basic Shortest Path
+	* Basic Shortest Path (BFS)
+	* Count Connected Components (BFS)
 
 
 [![Build Status](https://drone.io/github.com/franciscoy/algorithms/status.png)](https://drone.io/github.com/franciscoy/algorithms/latest)
