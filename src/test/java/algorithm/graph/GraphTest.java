@@ -157,7 +157,7 @@ public abstract class GraphTest {
         return adjacencyArrayList;
     }
 
-    public AdjacencyList getAdjacencyArrayListForTotallyUnconnectedCyclicGraph() {
+    public AdjacencyList getAdjacencyArrayListForTotallyUnconnectedGraph() {
         AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
 
         adjacencyArrayList.addVertex(1);
@@ -165,6 +165,23 @@ public abstract class GraphTest {
         adjacencyArrayList.addVertex(3);
         adjacencyArrayList.addVertex(4);
         adjacencyArrayList.addVertex(5);
+
+        return adjacencyArrayList;
+    }
+
+    public static AdjacencyList getAdjacencyArrayListForDirectedAcyclicGraph() {
+        AdjacencyArrayList adjacencyArrayList = new AdjacencyArrayList();
+
+        adjacencyArrayList.addVertex(4);
+        adjacencyArrayList.addVertex(1);
+        adjacencyArrayList.addVertex(3);
+        adjacencyArrayList.addVertex(5);
+        adjacencyArrayList.addVertex(2);
+
+        adjacencyArrayList.addNeighbor(1, 2);
+        adjacencyArrayList.addNeighbor(5, 3);
+        adjacencyArrayList.addNeighbor(5, 1);
+        adjacencyArrayList.addNeighbor(3, 4);
 
         return adjacencyArrayList;
     }

@@ -14,6 +14,17 @@ public class KargerMinCut {
 
     Random random = new Random();
 
+    /**
+     * Contracts random edges merging their two vertices
+     * until there are only two vertices left in the graph.
+     * The count of parallel edges represent the minimum cut of G.
+     *
+     * It may fail therefore it is iterated a number of times to maximize the chance of finding
+     * the minimum cut.
+     *
+     * @param list
+     * @return minimum cut
+     */
     public int minCut(AdjacencyList list) {
         int minCut = Integer.MAX_VALUE;
         for (int i = 0; i < getIterationsByVerticlesSize(list); i++) {
