@@ -39,6 +39,7 @@ Algorithms:
 	* Deep First Search, Iterative and Recursive
 	* Basic Shortest Path (BFS)
 	* Count Connected Components (BFS)
+	* Topological Sort (DFS)
 
 
 [![Build Status](https://drone.io/github.com/franciscoy/algorithms/status.png)](https://drone.io/github.com/franciscoy/algorithms/latest)
