@@ -20,6 +20,6 @@ public class CountConnectedComponentsBFSTest extends GraphTest{
 
     @Test
     public void whenCountingFromTotallyUnconnectedGraphReturnVerticesCount() {
-        assertEquals(5, countConnectedComponentsBFS.countConnectedComponents(getAdjacencyArrayListForTotallyUnconnectedCyclicGraph()));
+        assertEquals(5, countConnectedComponentsBFS.countConnectedComponents(getAdjacencyArrayListForTotallyUnconnectedGraph()));
     }
 }
