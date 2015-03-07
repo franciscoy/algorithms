@@ -1,7 +1,6 @@
 package algorithm.graph;
 
 import algorithm.graph.representation.AdjacencyList;
-import algorithm.graph.representation.impl.AdjacencyArrayList;
 
 import java.util.ArrayList;
 import java.util.List;
