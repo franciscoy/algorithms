@@ -113,3 +113,21 @@ Mathematical analysis of quicksort shows that, on average, the algorithm takes O
 | Worst case	|  O(n^2) |
 | Total Space |    O(n)    |
 | Aux Space |    O(log n)    |
+
+ -------   
+Heap Sort
+---------------------
+
+**Heapsort** is a comparison-based sorting algorithm. Heapsort can be thought of as an improved selection sort: like that algorithm, it divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region. The improvement consists of the use of a heap data structure rather than a linear-time search to find the maximum.
+
+Although somewhat slower in practice on most machines than a well-implemented quicksort, it has the advantage of a more favorable worst-case O(n log n) runtime. Heapsort is an in-place algorithm, but it is not a stable sort.
+
+ - *Unstable*
+ - *In-place* (but with a heap)
+
+|Complexity|            |
+|----------|:-------------:|
+| Avg. Time |  O(n log n)  |
+| Worst case	|  O(n log n) |
+| Total Space |    O(n)    |
+| Aux Space |    O(n)    |

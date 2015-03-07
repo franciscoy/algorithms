@@ -12,6 +12,7 @@ Algorithms:
 	*	Bubble Sort
 	* 	Shell Sort
 	*	Quick Sort
+	*	Heap Sort
 
 - Search:
 	* Linear Search
