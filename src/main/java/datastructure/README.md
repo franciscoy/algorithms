@@ -3,7 +3,7 @@ Data Structures
 -------
 -------
 
-Heap, Min-Heap
+Heap, Min-Heap/Max-Heap
 ---------------------
 
 Is a specialized tree-based data structure that satisfies the heap property: If A is a parent node of B then the key of node A is ordered with respect to the key of node B with the same ordering applying across the heap.
