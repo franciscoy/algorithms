@@ -42,10 +42,13 @@ Algorithms:
 	* Count Connected Components (BFS)
 	* Topological Sort (DFS)
 
+- Online:
+	* Median Maintenance
+
 --------------------------------------
 	
 - Data Structures:
-	* Heap, Min-Heap
+	* Heap, Min-Heap/Max-Heap
 
 
 [![Build Status](https://drone.io/github.com/franciscoy/algorithms/status.png)](https://drone.io/github.com/franciscoy/algorithms/latest)
