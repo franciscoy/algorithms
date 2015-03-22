@@ -22,3 +22,21 @@ Is a specialized tree-based data structure that satisfies the heap property: If 
 | Insert element | О(log n)  |
  
  ----
+
+Binary Search Tree, Unbalanced
+---------------------
+
+Binary search trees (BST), sometimes called ordered or sorted binary trees, are a class of data structures used to implement lookup tables and dynamic sets. They store data items, known as keys, and allow fast insertion and deletion of such keys, as well as checking whether a key is present in a tree.
+
+Binary search trees keep their keys in sorted order, so that lookup and other operations can use the principle of binary search: when looking for a key in a tree (or a place to insert a new key), they traverse the tree from root to leaf, making comparisons to keys stored in the nodes of the tree and deciding, based on the comparison, to continue searching in the left or right subtrees.
+
+Since the tree is unbalanced the height may be n in the worst case
+
+|Operations | Complexity |
+|----------|:-------------:|
+| Insert |  О(height) -> О(n)  |
+| Search  |  О(height) -> О(n)  |
+| Delete | О(height) -> О(n)  |
+| Traverse | О(n) |
+
+ ----
