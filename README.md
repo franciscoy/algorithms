@@ -50,5 +50,7 @@ Algorithms:
 - Data Structures:
 	* Heap, Min-Heap/Max-Heap
     * Unbalanced Binary Search Tree (BST)
-
+	* Union-Find, naive
+	* Union-Find, Optimized (Lazy union, Union by rank, Path compression)
+	
 [![Build Status](https://drone.io/github.com/franciscoy/algorithms/status.png)](https://drone.io/github.com/franciscoy/algorithms/latest)
