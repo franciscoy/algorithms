@@ -41,6 +41,7 @@ Algorithms:
 	* Basic Shortest Path (BFS)
 	* Count Connected Components (BFS)
 	* Topological Sort (DFS)
+	* MST: Kruskal
 
 - Online:
 	* Median Maintenance

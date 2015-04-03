@@ -71,6 +71,19 @@ Topological Sort (DFS)
 | Worst Case |  О(|N|+|E|)  |
 | Avg Case |  О(|N|+|E|)  |
 
+Minimum Spanning Tree
+---------------------
+
+
+Kruskal
+---------------------
+**Kruskal**'s algorithm is a minimum-spanning-tree algorithm where the algorithm finds an edge of the least possible weight that connects any two trees in the forest.It is a greedy algorithm in graph theory as it finds a minimum spanning tree for a connected weighted graph at each step.[1] This means it finds a subset of the edges that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized
+
+
+|Complexity|            |
+|----------|:-------------:|
+| Worst Case |  О(m log n)  |
+
 ---------------------------------------------------------------
 ---------------------
 
