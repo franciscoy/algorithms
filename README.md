@@ -45,6 +45,9 @@ Algorithms:
 
 - Online:
 	* Median Maintenance
+	
+- Compression:
+	* Huffman Coding
 
 --------------------------------------
 	
