@@ -23,20 +23,31 @@ public class HuffmanCoding {
     }
 
     /**
-     * Decode a string with a Huffman tree
+     * Decode a string with a Huffman tree, traversing the tree.
+     * If the char is 1 go right, 0 go left until find a leaf with its value.
+     * O(n log m), n = number of chars, m = number of nodes in the tree
+     *
      * @param encodedString input to decode
      * @param tree Huffman tree
      * @return
      */
-    //WIP TODO
     public String decodeString(String encodedString, HuffmanNode tree) {
-        StringBuilder decodedString = new StringBuilder();
+        try {
+            StringBuilder decodedString = new StringBuilder();
+            HuffmanNode currentNode = tree;
 
-        for (char c : encodedString.toCharArray()) {
+            for (char c : encodedString.toCharArray()) {
+                currentNode = (c=='1') ? currentNode.getRight() : currentNode.getLeft();
+                if (currentNode.getName() != HuffmanNode.EMPTY_CHAR) {
+                    decodedString.append(currentNode.getName());
+                    currentNode = tree;
+                }
+            }
 
+            return decodedString.toString();
+        } catch (NullPointerException e) {
+            throw new IllegalArgumentException("The encoded string is invalid or does not match the huffman tree.");
         }
-
-        return decodedString.toString();
     }
 
     /**
@@ -86,23 +97,6 @@ public class HuffmanCoding {
         return huffmanNodePriorityQueue.remove();
     }
 
-    public static void main(String[] args) {
-        HuffmanCoding huffmanCoding = new HuffmanCoding();
-//        int[] c = new int[6];
-//        c[0] = 3;
-//        c[1] = 2;
-//        c[2] = 6;
-//        c[3] = 8;
-//        c[4] = 2;
-//        c[5] = 6;
-//
-//        HuffmanNode h = huffmanCoding.generateHuffmanTree(c);
-//        Map<Character, String> map = huffmanCoding.generateEncodingMap(h);
-//        System.out.println("a");
-        String a = huffmanCoding.encodeString("hola manola");
-        System.out.println(a);
-    }
-
     public String encodeString(String inputString, Map<Character, String> encodingMap) {
         StringBuilder encodedString = new StringBuilder();
 
@@ -121,7 +115,9 @@ public class HuffmanCoding {
     }
 
     /**
-     * InOrder Traversal to generate an encoding map
+     * InOrder Traversal to generate an encoding map,
+     * The lowest node go to the right, with 1, the bigger one goes in the left with 0.
+     *
      * @param node
      * @param currentPath
      * @param encodingMap

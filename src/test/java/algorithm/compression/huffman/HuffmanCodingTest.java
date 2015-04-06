@@ -42,4 +42,17 @@ public class HuffmanCodingTest {
         String encodedString = huffmanCoding.encodeString("the cat is under the table");
         assertEquals("00100010101101110011000111000011000011100110101011010100011100100010101100101100111100000010", encodedString);
     }
+
+    @Test
+    public void whenDecodingEncodedStringThenReturnCorrect() {
+        HuffmanCoding huffmanCoding = new HuffmanCoding();
+        String stringToEncode = "the cat is under the table";
+        String encodedString = huffmanCoding.encodeString(stringToEncode);
+
+        int[] charFrequency = huffmanCoding.generateCharFrequency(stringToEncode);
+        HuffmanNode tree = huffmanCoding.generateHuffmanTree(charFrequency);
+
+        String decoded = huffmanCoding.decodeString(encodedString, tree);
+        assertEquals(stringToEncode, decoded);
+    }
 }
