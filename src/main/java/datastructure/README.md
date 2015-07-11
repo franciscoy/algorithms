@@ -3,6 +3,20 @@ Data Structures
 -------
 -------
 
+Stack, linked-list/dynamic array
+---------------------
+
+In computer science, a stack or LIFO (last in, first out) is an abstract data type that serves as a collection of elements, with two principal operations: push, which adds an element to the collection, and pop, which removes the last element that was added.
+
+The term LIFO stems from the fact that, using these operations, each element "popped off" a stack in series of pushes and pops is the last (most recent) element that was "pushed into" within the sequence. This is equivalent to the requirement that, considered as a linear data structure, or more abstractly a sequential collection, the push and pop operations occur only at one end of the structure, referred to as the top of the stack.
+
+
+|Operations | Complexity |
+|----------|:-------------:|
+| Push 		|  О(1)	 |
+| Pop 		|  О(1)	 |
+| isEmpty 	|  О(1)  |
+
 Heap, Min-Heap/Max-Heap
 ---------------------
 

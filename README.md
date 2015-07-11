@@ -52,6 +52,8 @@ Algorithms:
 --------------------------------------
 	
 - Data Structures:
+	* Stack, linked list
+	* Stack, dynamic array
 	* Heap, Min-Heap/Max-Heap
     * Unbalanced Binary Search Tree (BST)
 	* Union-Find, naive
